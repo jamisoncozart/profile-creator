@@ -115,3 +115,17 @@ hr {
   background-color: rgb(184, 191, 253);
   border: 2px solid blue;
 }
+
+.submitButton {
+  width: 100%;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  background-color: #bbb;
+}

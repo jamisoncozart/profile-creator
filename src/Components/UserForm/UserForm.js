@@ -3,7 +3,7 @@ import React from 'react';
 const userForm = props => {
   return (
     <div className="UserForm cardDiv">
-      <h2>User Form</h2>
+      <h2>New Profile</h2>
       <hr />
       <form>
         <div className="form-input">
@@ -26,6 +26,7 @@ const userForm = props => {
             <option value="blueProfile">Blue</option>
           </select>
         </div>
+        <button type="submit" class="submitButton">Create Profile</button>
       </form>
     </div>
   )
