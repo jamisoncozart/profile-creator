@@ -1,28 +1,117 @@
 .App {
   text-align: center;
+  width: 60%;
+  margin: auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* CUSTOM STYLES */
+body {
+  background-color: rgb(241, 241, 241);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h1 {
+  margin: 30px;
+  font-size: 40px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.App-intro {
-  font-size: large;
+.cardDiv {
+  width: 35%;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px #ccc;
+  padding: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.cardDiv h2 {
+  margin: 0;
+}
+
+hr {
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.UserForm form {
+  text-align: left;
+}
+
+.UserForm .form-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.UserForm label {
+  font-weight: bold;
+}
+
+.UserForm input, .UserForm select {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.imgDiv {
+ position: relative;
+ overflow: hidden;
+ border-radius: 50%;
+ border: 2px solid black;
+ width: 180px;
+ height: 180px;
+}
+
+.UserProfile img {
+  height: 180px;
+  width: auto;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+
+.UserProfile h2 {
+  margin: 10px;
+}
+
+.UserProfile p {
+  margin: 0;
+}
+
+.bio {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.redProfile {
+  background-color: rgb(253, 184, 184);
+  border: 2px solid red;
+}
+
+.greenProfile {
+  background-color: rgb(195, 253, 184);
+  border: 2px solid green;
+}
+
+.blueProfile {
+  background-color: rgb(184, 191, 253);
+  border: 2px solid blue;
 }
