@@ -5,7 +5,7 @@ const userProfile = props => {
   return (
     <div className={classes.join(" ")}>
       <div className="imgDiv">
-        <img src={props.pic} alt="profile picture" />
+        <img src={props.pic} alt="profile" />
       </div>
       <h2>{props.name}</h2>
       <div className="bio">

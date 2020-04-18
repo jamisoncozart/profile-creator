@@ -10,7 +10,7 @@ class App extends Component {
     formBio: "Tell us about yourself...",
     formPic: "https://www.netclipart.com/pp/m/244-2441803_profile-pic-icon-png.png",
     formColor: "greenProfile",
-    showProfiles: true,
+    showProfiles: false,
     profiles: [
       {id: "1", name: "Rick Sanchez", bio: "Wubba Lubba Dub Dub!!!", pic: "https://comicvine1.cbsistatic.com/uploads/scale_small/6/66303/4469093-screen%20shot%202015-03-25%20at%205.13.24%20pm%20copy.jpg", color: "greenProfile"},
       {id: "2", name: "Morty Smith", bio: "Ah geez, I don't know what to say?", pic: "https://www.superherodb.com/pictures2/portraits/10/050/11564.jpg?v=1578245132", color: "blueProfile"},
@@ -42,44 +42,6 @@ class App extends Component {
       formColor: event.target.value
     })
   }
-
-  // persons = () => {
-  //   if(this.state.showProfiles) {
-  //     return this.state.profiles.map((profile, index) => (
-  //       <div className="profiles">
-  //         <UserProfile 
-  //           name={profile.name}
-  //           bio={profile.bio}
-  //           pic={profile.pic}
-  //           color={profile.color}
-  //           key={profile.id}
-  //           index={index} />
-  //       </div>
-  //     ));
-  //   } else {
-  //     return (
-  //       <div>
-  //         <h1>React Profile Creator</h1>
-  //         <div className="row">
-  //           <UserForm 
-  //             nameChanged={this.formNameChangeHandler} 
-  //             name={this.state.formName} 
-  //             bioChanged={this.formBioChangeHandler}
-  //             bio={this.state.formBio}
-  //             picChanged={this.formPicChangeHandler}
-  //             pic={this.state.formPic}
-  //             colorChanged={this.formColorChangeHandler}
-  //             color={this.state.formColor} />
-  //           <UserProfile 
-  //             name={this.state.formName}
-  //             bio={this.state.formBio}
-  //             pic={this.state.formPic}
-  //             color={this.state.formColor} />
-  //         </div>
-  //       </div>
-  //     )
-  //   }
-  // }
 
   render() {
     let persons = null;
