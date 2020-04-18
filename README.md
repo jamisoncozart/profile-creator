@@ -47,6 +47,7 @@ _View the contents of this project by opening in VSCode:_
 ```
 code .
 ```
+**Change the `state.showProfiles` to be `true` if you want to see all profiles, however this feature is a work in progress and has not been styled yet.
 
 ## Technologies Used
 
