@@ -65,11 +65,11 @@ class App extends Component {
           <div className="row">
             <UserForm 
               nameChanged={this.formNameChangeHandler} 
-              name={this.state.formName} 
+              name={this.state.formName === "Your Name" ? "" : this.state.formName} 
               bioChanged={this.formBioChangeHandler}
-              bio={this.state.formBio}
+              bio={this.state.formBio === "Tell us about yourself..." ? "" : this.state.formBio}
               picChanged={this.formPicChangeHandler}
-              pic={this.state.formPic}
+              pic={this.state.formPic === "https://www.netclipart.com/pp/m/244-2441803_profile-pic-icon-png.png" ? "" : this.state.formPic}
               colorChanged={this.formColorChangeHandler}
               color={this.state.formColor} />
             <UserProfile 
