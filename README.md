@@ -2,6 +2,8 @@
 
 #### _18 April 2020 | Jamison Cozart_
 
+![Photo of UI](https://i.imgur.com/Art2yhg.png)
+
 ## Description
 
 _Simple React app that dynamically displays a profile as the user fills out the profile creation form._
