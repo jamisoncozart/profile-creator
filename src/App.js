@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import UserForm from './Components/UserForm/UserForm';
 import UserProfile from './Components/UserProfile/UserProfile';
+import ToggleProfilesButton from './Components/ToggleProfilesButton/ToggleProfilesButton';
 
 class App extends Component {
 
@@ -43,19 +44,35 @@ class App extends Component {
     })
   }
 
+  showProfilesHandler = event => {
+
+    let newProfile = null;
+
+    if(!this.state.showProfiles) {
+      newProfile = {
+        name: this.state.formName,
+        bio: this.state.formBio,
+        pic: this.state.formPic,
+        color: this.state.formColor
+      }
+    }
+    this.setState({
+      profiles: (this.state.showProfiles ? [...this.state.profiles] : [...this.state.profiles, newProfile]),
+      showProfiles: !this.state.showProfiles
+    })
+  }
+
   render() {
     let persons = null;
 
     if(this.state.showProfiles) {
       persons = this.state.profiles.map((profile, index) => (
-        <div className="profile">
+        <div className="profile" key={index}>
           <UserProfile 
             name={profile.name}
             bio={profile.bio}
             pic={profile.pic}
-            color={profile.color}
-            key={profile.id}
-            index={index} />
+            color={profile.color} />
         </div>
       ));
     } else {
@@ -71,7 +88,9 @@ class App extends Component {
               picChanged={this.formPicChangeHandler}
               pic={this.state.formPic === "https://www.netclipart.com/pp/m/244-2441803_profile-pic-icon-png.png" ? "" : this.state.formPic}
               colorChanged={this.formColorChangeHandler}
-              color={this.state.formColor} />
+              color={this.state.formColor}
+              click={this.showProfilesHandler}
+              buttonText={"Create Profile"} />
             <UserProfile 
               name={this.state.formName}
               bio={this.state.formBio}
@@ -86,6 +105,7 @@ class App extends Component {
       <div className="App">
         <div className="profilesRow">
           {persons}
+          {this.state.showProfiles ? <ToggleProfilesButton className="createProfileButton" click={this.showProfilesHandler} buttonText={"Add New Profile"} /> : <p></p>}
         </div>
       </div>
     );

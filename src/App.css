@@ -130,3 +130,17 @@ hr {
   cursor: pointer;
   background-color: #bbb;
 }
+
+.profile {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.profilesRow {
+  margin-bottom: 50%;
+}
+
+.createProfileButton button {
+  background-color: white;
+}

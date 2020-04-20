@@ -1,4 +1,5 @@
 import React from 'react';
+import ToggleProfilesButton from '../ToggleProfilesButton/ToggleProfilesButton';
 
 const userForm = props => {
   return (
@@ -26,7 +27,7 @@ const userForm = props => {
             <option value="blueProfile">Blue</option>
           </select>
         </div>
-        <button type="submit" class="submitButton">Create Profile</button>
+        <ToggleProfilesButton click={props.click} buttonText={props.buttonText} />
       </form>
     </div>
   )
